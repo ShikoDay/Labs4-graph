@@ -88,48 +88,48 @@ C++
 
 C++
 
-#include <iostream>
-#include <vector>
-#include <list>
+   #include <iostream>
+   #include <vector>
+   #include <list>
 
-class Graph {
-public:
-    int V; // Количество вершин
-    std::vector<std::list<int>> adj;
-
-    Graph(int V) {
-        this->V = V;
-        adj.resize(V);
-    }
-
-    void addEdge(int v, int w) {
-        adj[v].push_back(w); // Добавление ребра от v к w
-    }
-
-    void printGraph() {
-        for (int v = 0; v < V; ++v) {
-            std::cout << "Вершина " << v << ":";
-            for (int w : adj[v]) {
-                std::cout << " -> " << w;
-            }
-            std::cout << std::endl;
-        }
-    }
-};
-
-int main() {
-    Graph g(5);
-    g.addEdge(0, 1);
-    g.addEdge(0, 4);
-    g.addEdge(1, 2);
-    g.addEdge(1, 3);
-    g.addEdge(1, 4);
-    g.addEdge(2, 3);
-    g.addEdge(3, 4);
-
-    g.printGraph();
-    return 0;
-}
+   class Graph {
+   public:
+       int V; // Количество вершин
+       std::vector<std::list<int>> adj;
+   
+       Graph(int V) {
+           this->V = V;
+           adj.resize(V);
+       }
+   
+       void addEdge(int v, int w) {
+           adj[v].push_back(w); // Добавление ребра от v к w
+       }
+   
+       void printGraph() {
+           for (int v = 0; v < V; ++v) {
+               std::cout << "Вершина " << v << ":";
+               for (int w : adj[v]) {
+                   std::cout << " -> " << w;
+               }
+               std::cout << std::endl;
+           }
+       }
+   };
+   
+   int main() {
+       Graph g(5);
+       g.addEdge(0, 1);
+       g.addEdge(0, 4);
+       g.addEdge(1, 2);
+       g.addEdge(1, 3);
+       g.addEdge(1, 4);
+       g.addEdge(2, 3);
+       g.addEdge(3, 4);
+   
+       g.printGraph();
+       return 0;
+   }
 
 ▎Заключение
 

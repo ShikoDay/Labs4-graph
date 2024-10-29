@@ -18,11 +18,10 @@
 
 ▎Пример:
      
-C++
-
+```C++
      const int MAX_VERTICES = 100;
      int graph[MAX_VERTICES][MAX_VERTICES] = {0}; // Инициализация нулями
-     
+```     
 
 2. Список смежности:
 
@@ -32,13 +31,12 @@ C++
 
 ▎Пример:
      
-C++
-
+```C++
      #include <vector>
      #include <list>
 
      std::vector<std::list<int>> graph(MAX_VERTICES);
-     
+```    
 
 3. Структуры и классы:
 
@@ -46,8 +44,7 @@ C++
 
 ▎Пример:
      
-C++
-
+```C++
      struct Edge {
          int to;
          int weight;
@@ -58,7 +55,7 @@ C++
          std::vector<std::vector<Edge>> adjList;
          // Методы для работы с графом
      };
-     
+```     
 
 ▎Алгоритмы работы с графами
 
